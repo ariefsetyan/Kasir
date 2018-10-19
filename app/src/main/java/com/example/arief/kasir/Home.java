@@ -1,6 +1,5 @@
 package com.example.arief.kasir;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,17 +15,16 @@ public class Home extends AppCompatActivity {
     Toolbar toolbar;
 
     GridView androidGridView;
-    String CustomGridViewActivity[] = {"Daftar barang",
-            "tambah pegawai",
-            "Daftar pegawai",
-            "jual",
-            "beli"
+
+    String CustomGridViewActivity[] = {"Mater Barang",
+            "Transaksi",
+            "Laporan",
+
     };
-    int gridViewImageId[] = {R.drawable.ic_assignment_black_24dp,
-            R.drawable.ic_add_black_24dp,
-            R.drawable.ic_assignment_ind_black_24dp,
+    int gridViewImageId[] = {
+            R.drawable.database,
             R.drawable.ic_shopping_cart_black_24dp,
-            R.drawable.ic_shopping_cart_black_24dp
+            R.drawable.ic_assignment_black_24dp
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,19 +41,16 @@ public class Home extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                if (CustomGridViewActivity[i] == "Daftar barang"){
-                    Toast.makeText(Home.this, "kode1", Toast.LENGTH_SHORT).show();
-                }else if (CustomGridViewActivity[i] == "tambah pegawai"){
-                    Toast.makeText(Home.this, "kode2", Toast.LENGTH_SHORT).show();
-                }else if (CustomGridViewActivity[i] == "Daftar pegawai"){
+                if (CustomGridViewActivity[i] == "Mater Barang"){
+                    Intent dbarang = new Intent(Home.this,Master.class);
+                    startActivity(dbarang);
+                }else if (CustomGridViewActivity[i] == "Transaksi"){
+                    Intent Itransaksi=new Intent(Home.this,Transaksi.class);
+                    startActivity(Itransaksi);
+                }else if (CustomGridViewActivity[i] == "Laporan"){
                     Toast.makeText(Home.this, "kode3", Toast.LENGTH_SHORT).show();
-                }else if (CustomGridViewActivity[i] == "jual"){
-                    Toast.makeText(Home.this, "kode4", Toast.LENGTH_SHORT).show();
-                }else if (CustomGridViewActivity[i] == "beli"){
-//                    Toast.makeText(Home.this, "kode5", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Home.this,AddBarang.class);
-                    startActivity(intent);
                 }
+
 //                Intent intent = new Intent(Home.this,AddBarang.class);
             }
         });

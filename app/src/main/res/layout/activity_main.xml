@@ -5,65 +5,84 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:id="@+id/relativlayout"
-    >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LOGO"
-        android:textSize="35dp"
-        android:paddingTop="20dp"
-        android:gravity="center"
-        android:id="@+id/logo"/>
+    android:id="@+id/relativlayout">
 
-    <android.support.design.widget.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/username_TextInputlayout"
-        android:paddingTop="32dp"
-        android:paddingRight="32dp"
-        android:paddingLeft="32dp"
-        android:paddingBottom="8dp"
-        android:layout_below="@+id/logo">
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.AppCompatEditText
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/username"
-            android:hint="Username"
-            android:inputType="text"/>
+            android:layout_height="match_parent">
 
-    </android.support.design.widget.TextInputLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/password_TextInputlayout"
-        android:paddingTop="32dp"
-        android:paddingRight="32dp"
-        android:paddingLeft="32dp"
-        android:paddingBottom="8dp"
-        android:layout_below="@+id/username_TextInputlayout"
-        app:passwordToggleEnabled="true"
-        app:counterOverflowTextAppearance="@style/CharacterOverflow">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LOGO"
+                    android:textSize="35dp"
+                    android:paddingTop="20dp"
+                    android:gravity="center"
+                    android:id="@+id/logo"/>
 
-        <android.support.v7.widget.AppCompatEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/password"
-            android:hint="Password"
-            android:inputType="textPassword"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/username_TextInputlayout"
+                    android:paddingTop="32dp"
+                    android:paddingRight="32dp"
+                    android:paddingLeft="32dp"
+                    android:paddingBottom="8dp"
+                    android:layout_below="@+id/logo">
 
-    </android.support.design.widget.TextInputLayout>
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/username"
+                        android:hint="Username"
+                        android:inputType="text"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="log in"
-        android:layout_marginTop="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:id="@+id/login"
-        android:layout_below="@+id/password_TextInputlayout"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password_TextInputlayout"
+                    android:paddingTop="32dp"
+                    android:paddingRight="32dp"
+                    android:paddingLeft="32dp"
+                    android:paddingBottom="8dp"
+                    android:layout_below="@+id/username_TextInputlayout"
+                    app:passwordToggleEnabled="true"
+                    app:counterOverflowTextAppearance="@style/CharacterOverflow">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/password"
+                        android:hint="Password"
+                        android:inputType="textPassword"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="log in"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:id="@+id/login"
+                    android:layout_below="@+id/password_TextInputlayout"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 
 </RelativeLayout>
