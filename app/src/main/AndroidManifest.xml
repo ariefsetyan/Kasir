@@ -21,7 +21,8 @@
         <activity android:name=".add_Pegawai" />
         <activity android:name=".Master" />
         <activity android:name=".Transaksi" />
-        <activity android:name=".DaftarBarang"></activity>
+        <activity android:name=".DaftarBarang" />
+        <activity android:name=".DaftarKaryawan"></activity>
     </application>
 
 </manifest>

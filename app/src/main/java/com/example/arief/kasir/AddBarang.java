@@ -19,28 +19,39 @@ public class AddBarang extends AppCompatActivity {
     Button button;
     TextInputLayout kodelayoat,namaLayout,harBeliLayout,harJualLayout,stokLayout;
     AppCompatEditText kode,nama,hargabeli,harhajual,stok;
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-////        Intent intent = new Intent(AddBarang.this,Home.class);
-////        startActivity(intent);
-//        return super.onOptionsItemSelected(item);
-//    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home){
+            finish();
+        }
+//        Intent intent = new Intent(AddBarang.this,Home.class);
+//        startActivity(intent);
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_barang);
+
         toolbar=(Toolbar)findViewById(R.id.toolbar);
+
         kodelayoat=(TextInputLayout)findViewById(R.id.kode_textInputlayout);
         kode = (AppCompatEditText) findViewById(R.id.kodebarang);
+
         namaLayout=(TextInputLayout)findViewById(R.id.namatextInputlayout);
         nama = (AppCompatEditText) findViewById(R.id.namabarang);
+
         harBeliLayout=(TextInputLayout)findViewById(R.id.hargabelitextInputlayout);
         hargabeli=(AppCompatEditText)findViewById(R.id.hargabeli);
+
         harJualLayout = (TextInputLayout)findViewById(R.id.hargajual_textInputlayout);
         harhajual =(AppCompatEditText)findViewById(R.id.hargajual);
+
         stokLayout = (TextInputLayout)findViewById(R.id.stok_extInputlayout);
         stok=(AppCompatEditText)findViewById(R.id.stok);
+
         linearLayout=(LinearLayout)findViewById(R.id.linierLayout);
         linearLayout.setOnClickListener(null);
 
